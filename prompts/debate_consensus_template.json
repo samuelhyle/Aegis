@@ -1,0 +1,22 @@
+{
+  "name": "debate_consensus_template",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "template": "Generate a consensus statement based on the expert discussion.\n\nQUESTION: {question}\n\nEXPERT POSITIONS:\n{positions}\n\nPOINTS OF AGREEMENT:\n{agreements}\n\nREMAINING DISAGREEMENTS:\n{disagreements}\n\nSynthesize a clear, balanced consensus statement that:\n1. Directly answers the question\n2. Reflects areas of agreement\n3. Acknowledges remaining uncertainties\n4. Is clinically accurate and actionable",
+      "description": "Default clinical prompt: debate_consensus_template",
+      "author": "system",
+      "created_at": "2026-08-29T21:50:03.873105+00:00",
+      "tags": [
+        "clinical",
+        "default"
+      ],
+      "variables": [
+        "agreements",
+        "question",
+        "positions",
+        "disagreements"
+      ]
+    }
+  ]
+}

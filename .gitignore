@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+data/synthea/*.csv
+data/synthea/*.json
+data/synthea/*.ndjson
+data/synthea/*.zip
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+.DS_Store

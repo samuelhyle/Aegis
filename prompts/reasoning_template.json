@@ -1,0 +1,20 @@
+{
+  "name": "reasoning_template",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "template": "Based on the following observation, reason about what it means for the investigation.\n\nOBSERVATION:\n{observation}\n\n{f\"CONTEXT: {context}\" if context else \"\"}\n\nThink step by step:\n1. What does this observation tell us?\n2. How does it relate to the investigation question?\n3. What confidence do you have in this interpretation?\n4. What should we do next?\n\nRespond with a JSON object:\n{{\n    \"thought\": \"Your reasoning about the observation\",\n    \"confidence\": 0.0-1.0,\n    \"next_action\": \"What to do next (or 'conclude' if ready)\"\n}}",
+      "description": "Default clinical prompt: reasoning_template",
+      "author": "system",
+      "created_at": "2026-08-29T21:50:03.872780+00:00",
+      "tags": [
+        "clinical",
+        "default"
+      ],
+      "variables": [
+        "observation",
+        "context"
+      ]
+    }
+  ]
+}

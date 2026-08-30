@@ -1,0 +1,21 @@
+{
+  "name": "conclusion_template",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "template": "Based on your investigation, provide a structured conclusion.\n\nQUESTION: {question}\n\nEVIDENCE GATHERED:\n{evidence}\n\nREASONING CHAIN:\n{reasoning_chain}\n\nProvide a comprehensive conclusion that:\n1. Directly answers the question\n2. Lists key findings with supporting evidence\n3. States your confidence level\n4. Acknowledges uncertainties\n5. Makes recommendations if appropriate\n\nRespond with a JSON object:\n{{\n    \"summary\": \"Executive summary of findings\",\n    \"key_findings\": [\"Finding 1\", \"Finding 2\", ...],\n    \"evidence\": [\"Evidence supporting findings\", ...],\n    \"confidence\": 0.0-1.0,\n    \"uncertainties\": [\"Uncertainty 1\", ...],\n    \"recommendations\": [\"Recommendation 1\", ...]\n}}",
+      "description": "Default clinical prompt: conclusion_template",
+      "author": "system",
+      "created_at": "2026-08-29T21:50:03.872847+00:00",
+      "tags": [
+        "clinical",
+        "default"
+      ],
+      "variables": [
+        "evidence",
+        "reasoning_chain",
+        "question"
+      ]
+    }
+  ]
+}

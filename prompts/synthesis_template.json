@@ -1,0 +1,21 @@
+{
+  "name": "synthesis_template",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "template": "Synthesize the following findings from multiple clinical agents.\n\nPATIENT: {patient_id}\nQUESTION: {question}\n\nAGENT FINDINGS:\n{findings}\n\nYour task:\n1. Integrate these findings into a coherent narrative\n2. Identify areas of agreement and disagreement\n3. Assess overall confidence based on evidence quality\n4. Provide comprehensive recommendations\n5. Highlight key uncertainties\n\nRespond with a JSON object:\n{{\n    \"summary\": \"Integrated summary of all findings\",\n    \"key_findings\": [\"Finding 1 (supported by X agent)\", ...],\n    \"evidence\": [\"Evidence from multiple sources\", ...],\n    \"confidence\": 0.0-1.0,\n    \"uncertainties\": [\"Uncertainty 1\", ...],\n    \"recommendations\": [\"Recommendation 1\", ...],\n    \"agent_agreement\": \"Description of where agents agree/disagree\"\n}}",
+      "description": "Default clinical prompt: synthesis_template",
+      "author": "system",
+      "created_at": "2026-08-29T21:50:03.873178+00:00",
+      "tags": [
+        "clinical",
+        "default"
+      ],
+      "variables": [
+        "question",
+        "findings",
+        "patient_id"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "debate_agreements_template",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "template": "Analyze the following agent positions on a clinical question.\n\nQUESTION: {question}\n\nAGENT POSITIONS:\n{positions}\n\nIdentify:\n1. Points where agents AGREE\n2. Points where agents DISAGREE\n\nRespond with JSON:\n{{\n    \"agreements\": [\"Agreement 1\", \"Agreement 2\", ...],\n    \"disagreements\": [\"Disagreement 1\", \"Disagreement 2\", ...]\n}}",
+      "description": "Default clinical prompt: debate_agreements_template",
+      "author": "system",
+      "created_at": "2026-08-29T21:50:03.872981+00:00",
+      "tags": [
+        "clinical",
+        "default"
+      ],
+      "variables": [
+        "question",
+        "positions"
+      ]
+    }
+  ]
+}

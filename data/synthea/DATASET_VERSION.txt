@@ -1,0 +1,8 @@
+Do not commit generated Synthea data here.
+Record your local dataset generation details in your experiment log.
+
+Recommended:
+Synthea version: <git commit/tag>
+Population: <number>
+Command: ./run_synthea -p <N> --exporter.csv.export=true
+Generated: <date>

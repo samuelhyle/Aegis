@@ -1,0 +1,2372 @@
+{
+  "summary": {
+    "total_questions": 242,
+    "correct": 231,
+    "accuracy": 0.955,
+    "avg_confidence": 0.813,
+    "avg_duration_ms": 17.8,
+    "category_results": {
+      "patient_summary": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "total": 20
+      },
+      "conditions": {
+        "accuracy": 0.725,
+        "correct": 29,
+        "total": 40
+      },
+      "medications": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "total": 20
+      },
+      "encounters": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "total": 20
+      },
+      "observations": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "total": 20
+      },
+      "procedures": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "total": 20
+      },
+      "immunizations": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "total": 20
+      },
+      "temporal": {
+        "accuracy": 1.0,
+        "correct": 20,
+        "total": 20
+      },
+      "careplans": {
+        "accuracy": 1.0,
+        "correct": 18,
+        "total": 18
+      },
+      "comprehensive": {
+        "accuracy": 1.0,
+        "correct": 19,
+        "total": 19
+      },
+      "medication_condition": {
+        "accuracy": 1.0,
+        "correct": 19,
+        "total": 19
+      },
+      "allergies": {
+        "accuracy": 1.0,
+        "correct": 6,
+        "total": 6
+      }
+    }
+  },
+  "results": [
+    {
+      "question_id": "Q001",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 201.9193172454834,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 2025-07-08"
+      ]
+    },
+    {
+      "question_id": "Q002",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 16.459941864013672,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q003",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 16.314983367919922,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q004",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 16.255855560302734,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q005",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 16.250133514404297,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q006",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 16.124248504638672,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q007",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 16.06893539428711,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q008",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 15.838861465454102,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q009",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.6375,
+      "duration_ms": 16.09206199645996,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q010",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 16.793012619018555,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 1982-05-21"
+      ]
+    },
+    {
+      "question_id": "Q011",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 16.50834083557129,
+      "missing_facts": [
+        "Housing unsatisfactory (finding)"
+      ]
+    },
+    {
+      "question_id": "Q012",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 15.994071960449219,
+      "missing_facts": [
+        "Adolescent idiopathic scoliosis (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q013",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 16.2808895111084,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q014",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 16.307830810546875,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q015",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 15.793800354003906,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q016",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 15.852928161621094,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q017",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 15.991926193237305,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q018",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 15.815019607543945,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q019",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 16.0980224609375,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q020",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 15.882015228271484,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q021",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.7749999999999999,
+      "duration_ms": 15.803098678588867,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q022",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.286849975585938,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 2019-12-31"
+      ]
+    },
+    {
+      "question_id": "Q023",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.134023666381836,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q024",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 15.978097915649414,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q025",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 15.99574089050293,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q026",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.095876693725586,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q027",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.07799530029297,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q028",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.25990867614746,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q029",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.310930252075195,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q030",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.30997657775879,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q031",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.208171844482422,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q032",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.398191452026367,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q033",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.8,
+      "duration_ms": 16.609668731689453,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q034",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 17.51708984375,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 2016-03-13"
+      ]
+    },
+    {
+      "question_id": "Q035",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.814708709716797,
+      "missing_facts": [
+        "Otitis media (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q036",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.628026962280273,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q037",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.574382781982422,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q038",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.35575294494629,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q039",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.48569107055664,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q040",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.62611961364746,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q041",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.211986541748047,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q042",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 15.861988067626953,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q043",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.226768493652344,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q044",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.091108322143555,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q045",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.367197036743164,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q046",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.30377769470215,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 2015-06-25"
+      ]
+    },
+    {
+      "question_id": "Q047",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.371965408325195,
+      "missing_facts": [
+        "Otitis media (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q048",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.257047653198242,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q049",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.19696617126465,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q050",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.421079635620117,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q051",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.487836837768555,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q052",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.263961791992188,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q053",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 15.763282775878906,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q054",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.559839248657227,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q055",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.119003295898438,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q056",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.026020050048828,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q057",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.15595817565918,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q058",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.948938369750977,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 2004-08-30"
+      ]
+    },
+    {
+      "question_id": "Q059",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.448974609375,
+      "missing_facts": [
+        "Infection of tooth (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q060",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.368078231811523,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q061",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.421960830688477,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q062",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.84880256652832,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q063",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.939878463745117,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q064",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.544342041015625,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q065",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.457080841064453,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q066",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.763925552368164,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q067",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.833066940307617,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q068",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.4642333984375,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q069",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.521930694580078,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q070",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.96579360961914,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 1968-01-02"
+      ]
+    },
+    {
+      "question_id": "Q071",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.725229263305664,
+      "missing_facts": [
+        "Prediabetes (finding)"
+      ]
+    },
+    {
+      "question_id": "Q072",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 17.564058303833008,
+      "missing_facts": [
+        "Prediabetes (finding)"
+      ]
+    },
+    {
+      "question_id": "Q073",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.583131790161133,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q074",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.859220504760742,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q075",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.882823944091797,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q076",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.413854598999023,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q077",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.43912696838379,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q078",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.536163330078125,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q079",
+      "category": "allergies",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.410755157470703,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q080",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.325878143310547,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q081",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.380952835083008,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q082",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.475128173828125,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q083",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 15.740156173706055,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 1984-11-20"
+      ]
+    },
+    {
+      "question_id": "Q084",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.16191864013672,
+      "missing_facts": [
+        "Stress (finding)"
+      ]
+    },
+    {
+      "question_id": "Q085",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 16.15595817565918,
+      "missing_facts": [
+        "Received higher education (finding)"
+      ]
+    },
+    {
+      "question_id": "Q086",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.005992889404297,
+      "missing_facts": [
+        "{7 (ethinyl estradiol 0.01 MG Oral Tablet) / 84 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]"
+      ]
+    },
+    {
+      "question_id": "Q087",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.386747360229492,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q088",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.090869903564453,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q089",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.080141067504883,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q090",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 15.94090461730957,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q091",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 15.883922576904297,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q092",
+      "category": "allergies",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 15.947103500366211,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q093",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.037940979003906,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q094",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.16692543029785,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q095",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.165971755981445,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q096",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.615867614746094,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 1988-06-24"
+      ]
+    },
+    {
+      "question_id": "Q097",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.943931579589844,
+      "missing_facts": [
+        "Loss of teeth (disorder)",
+        "Housing unsatisfactory (finding)"
+      ]
+    },
+    {
+      "question_id": "Q098",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 16.78323745727539,
+      "missing_facts": [
+        "Loss of teeth (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q099",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.584157943725586,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q100",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.689777374267578,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q101",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.437053680419922,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q102",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.76487922668457,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q103",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.83211326599121,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q104",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.663074493408203,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q105",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.526222229003906,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q106",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.068147659301758,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q107",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.996145248413086,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q108",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.7539119720459,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 1973-08-08"
+      ]
+    },
+    {
+      "question_id": "Q109",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.67618751525879,
+      "missing_facts": [
+        "Stress (finding)"
+      ]
+    },
+    {
+      "question_id": "Q110",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 16.76487922668457,
+      "missing_facts": [
+        "Received higher education (finding)"
+      ]
+    },
+    {
+      "question_id": "Q111",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.663074493408203,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q112",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.64900779724121,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q113",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.836881637573242,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q114",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.704082489013672,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q115",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.720294952392578,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q116",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.029762268066406,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q117",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.67873764038086,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q118",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.039775848388672,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q119",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.791105270385742,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q120",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.367124557495117,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 1972-10-14"
+      ]
+    },
+    {
+      "question_id": "Q121",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.225027084350586,
+      "missing_facts": [
+        "Housing unsatisfactory (finding)"
+      ]
+    },
+    {
+      "question_id": "Q122",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 17.351865768432617,
+      "missing_facts": [
+        "Housing unsatisfactory (finding)"
+      ]
+    },
+    {
+      "question_id": "Q123",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.61937141418457,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q124",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.737865447998047,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q125",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.71378517150879,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q126",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.706871032714844,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q127",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.93217658996582,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q128",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.26078987121582,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q129",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.384052276611328,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q130",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.53401756286621,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q131",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 26.28803253173828,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q132",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.495155334472656,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 1999-08-29"
+      ]
+    },
+    {
+      "question_id": "Q133",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.43483543395996,
+      "missing_facts": [
+        "Atopic dermatitis (disorder)",
+        "Childhood asthma (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q134",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 17.78388023376465,
+      "missing_facts": [
+        "Atopic dermatitis (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q135",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.663002014160156,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q136",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.36307144165039,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q137",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.295122146606445,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q138",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.52305030822754,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q139",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.617225646972656,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q140",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.3187255859375,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q141",
+      "category": "allergies",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.26818084716797,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q142",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.51089096069336,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q143",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.46678352355957,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q144",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.30203628540039,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q145",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.241788864135742,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 2016-01-29"
+      ]
+    },
+    {
+      "question_id": "Q146",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.28589630126953,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q147",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.174793243408203,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q148",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 15.753030776977539,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q149",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.271114349365234,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q150",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.1130428314209,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q151",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.11804962158203,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q152",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.247034072875977,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q153",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 15.89822769165039,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q154",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.06583595275879,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q155",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 15.918970108032227,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q156",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.279220581054688,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q157",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.278194427490234,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 1975-12-05"
+      ]
+    },
+    {
+      "question_id": "Q158",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.27008819580078,
+      "missing_facts": [
+        "Housing unsatisfactory (finding)",
+        "Prediabetes (finding)"
+      ]
+    },
+    {
+      "question_id": "Q159",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 17.176151275634766,
+      "missing_facts": [
+        "Housing unsatisfactory (finding)"
+      ]
+    },
+    {
+      "question_id": "Q160",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.099857330322266,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q161",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.220258712768555,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q162",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.583847045898438,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q163",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.242908477783203,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q164",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.067909240722656,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q165",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.950130462646484,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q166",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.806053161621094,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q167",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.785072326660156,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q168",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.789840698242188,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q169",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.58487319946289,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 1999-03-15"
+      ]
+    },
+    {
+      "question_id": "Q170",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.519784927368164,
+      "missing_facts": [
+        "Acute bronchitis (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q171",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.705989837646484,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q172",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.70694351196289,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q173",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.705989837646484,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q174",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.563892364501953,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q175",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.739845275878906,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q176",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.705989837646484,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q177",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.84713363647461,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q178",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.7391300201416,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q179",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.460895538330078,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q180",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.583919525146484,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q181",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.28312873840332,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 1972-01-10"
+      ]
+    },
+    {
+      "question_id": "Q182",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.42808723449707,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q183",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 18.612146377563477,
+      "missing_facts": [
+        "Risk activity involvement (finding)"
+      ]
+    },
+    {
+      "question_id": "Q184",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.194913864135742,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q185",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.980098724365234,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q186",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.09406280517578,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q187",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.17607879638672,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q188",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.311262130737305,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q189",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.477916717529297,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q190",
+      "category": "allergies",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.188953399658203,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q191",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.047809600830078,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q192",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.07689666748047,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q193",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.083810806274414,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q194",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.71624183654785,
+      "missing_facts": [
+        "Gender: M",
+        "DOB: 1987-10-27"
+      ]
+    },
+    {
+      "question_id": "Q195",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.17884635925293,
+      "missing_facts": [
+        "Gingivitis (disorder)",
+        "Gingivitis (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q196",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.993045806884766,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q197",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.659975051879883,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q198",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.403913497924805,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q199",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.5560245513916,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q200",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.742944717407227,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q201",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.643762588500977,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q202",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.638994216918945,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q203",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.270160675048828,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q204",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.8125,
+      "duration_ms": 16.43991470336914,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q205",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.292022705078125,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 1988-09-15"
+      ]
+    },
+    {
+      "question_id": "Q206",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.69280433654785,
+      "missing_facts": [
+        "Full-time employment (finding)"
+      ]
+    },
+    {
+      "question_id": "Q207",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.40717887878418,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q208",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.45319366455078,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q209",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.195940017700195,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q210",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.521142959594727,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q211",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.554044723510742,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q212",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.37189292907715,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q213",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.367124557495117,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q214",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.620086669921875,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q215",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.203092575073242,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q216",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.35210418701172,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q217",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.867969512939453,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 1962-12-27"
+      ]
+    },
+    {
+      "question_id": "Q218",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 19.165992736816406,
+      "missing_facts": [
+        "Prediabetes (finding)"
+      ]
+    },
+    {
+      "question_id": "Q219",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 19.344091415405273,
+      "missing_facts": [
+        "Past pregnancy history of miscarriage (situation)"
+      ]
+    },
+    {
+      "question_id": "Q220",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 19.030094146728516,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q221",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.931865692138672,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q222",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.52107048034668,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q223",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.777132034301758,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q224",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.807172775268555,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q225",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.79596710205078,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q226",
+      "category": "allergies",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 19.488096237182617,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q227",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 19.27924156188965,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q228",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.93019676208496,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q229",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 18.815994262695312,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q230",
+      "category": "patient_summary",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.59703254699707,
+      "missing_facts": [
+        "Gender: F",
+        "DOB: 1987-05-04"
+      ]
+    },
+    {
+      "question_id": "Q231",
+      "category": "conditions",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.370773315429688,
+      "missing_facts": [
+        "Seizure disorder (disorder)",
+        "History of seizure (situation)"
+      ]
+    },
+    {
+      "question_id": "Q232",
+      "category": "conditions",
+      "difficulty": "medium",
+      "correct": false,
+      "confidence": 0.825,
+      "duration_ms": 16.558170318603516,
+      "missing_facts": [
+        "Seizure disorder (disorder)"
+      ]
+    },
+    {
+      "question_id": "Q233",
+      "category": "medications",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.43085479736328,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q234",
+      "category": "encounters",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.91603660583496,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q235",
+      "category": "observations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.756057739257812,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q236",
+      "category": "procedures",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 16.887903213500977,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q237",
+      "category": "immunizations",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.127275466918945,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q238",
+      "category": "careplans",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.220735549926758,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q239",
+      "category": "allergies",
+      "difficulty": "easy",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.731189727783203,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q240",
+      "category": "comprehensive",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.37809181213379,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q241",
+      "category": "temporal",
+      "difficulty": "medium",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.78101921081543,
+      "missing_facts": []
+    },
+    {
+      "question_id": "Q242",
+      "category": "medication_condition",
+      "difficulty": "hard",
+      "correct": true,
+      "confidence": 0.825,
+      "duration_ms": 17.481088638305664,
+      "missing_facts": []
+    }
+  ]
+}

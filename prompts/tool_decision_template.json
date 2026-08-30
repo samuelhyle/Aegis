@@ -1,0 +1,21 @@
+{
+  "name": "tool_decision_template",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "template": "Given the current investigation step and context, decide which tool to call.\n\nSTEP: {step_desc}\nCONTEXT: {context}\nAVAILABLE TOOLS: {tool_list}\n\nIf a tool call would help, respond with:\n{{\"tool\": \"tool_name\", \"args\": {{\"param\": \"value\"}}}}\n\nIf no tool is needed (e.g., we have enough evidence), respond with:\n{{\"tool\": null, \"reason\": \"why no tool is needed\"}}",
+      "description": "Default clinical prompt: tool_decision_template",
+      "author": "system",
+      "created_at": "2026-08-29T21:50:03.872914+00:00",
+      "tags": [
+        "clinical",
+        "default"
+      ],
+      "variables": [
+        "tool_list",
+        "context",
+        "step_desc"
+      ]
+    }
+  ]
+}

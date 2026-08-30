@@ -1,0 +1,21 @@
+{
+  "name": "debate_facilitation_template",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "template": "Facilitate a discussion on the following disagreement.\n\nQUESTION: {question}\nDISAGREEMENT: {disagreement}\n\nRELEVANT POSITIONS:\n{positions}\n\nProvide a balanced analysis that:\n1. Presents each perspective fairly\n2. Weighs the evidence\n3. Identifies the most supported conclusion\n4. Acknowledges remaining uncertainty\n\nRespond with a concise resolution (2-3 sentences).",
+      "description": "Default clinical prompt: debate_facilitation_template",
+      "author": "system",
+      "created_at": "2026-08-29T21:50:03.873042+00:00",
+      "tags": [
+        "clinical",
+        "default"
+      ],
+      "variables": [
+        "disagreement",
+        "question",
+        "positions"
+      ]
+    }
+  ]
+}
