@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -56,7 +57,13 @@ class PromptRegistry:
 
     def __init__(self, storage_path: str | None = None):
         self._prompts: dict[str, list[PromptVersion]] = {}
-        self._storage_path = Path(storage_path) if storage_path else Path("prompts")
+        if storage_path:
+            self._storage_path = Path(storage_path)
+        elif os.getenv("VERCEL") or os.getenv("AWS_LAMBDA_RUNTIME_API"):
+            # Use writable /tmp on serverless
+            self._storage_path = Path("/tmp/prompts")
+        else:
+            self._storage_path = Path("prompts")
         self._storage_path.mkdir(parents=True, exist_ok=True)
 
     def register(

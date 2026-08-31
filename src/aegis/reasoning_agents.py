@@ -118,7 +118,7 @@ class ReasoningAgent(ABC):
         self,
         llm: LLMProvider | None = None,
         tools: ToolRegistry | None = None,
-        max_reasoning_steps: int = 10,
+        max_reasoning_steps: int = 3,
         max_tool_calls: int = 5,
         prompt_registry: PromptRegistry | None = None,
     ):

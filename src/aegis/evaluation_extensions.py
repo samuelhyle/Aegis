@@ -8,6 +8,7 @@ and SQLite persistence to the evaluation framework.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sqlite3
 import statistics
@@ -532,7 +533,11 @@ class EvaluationStore:
 
     def __init__(self, db_path: str | Path | None = None):
         if db_path is None:
-            db_path = Path.home() / ".aegis" / "evaluation.db"
+            # Use writable location: /tmp on Vercel/serverless, ~/.aegis locally
+            if os.getenv("VERCEL") or os.getenv("AWS_LAMBDA_RUNTIME_API"):
+                db_path = Path("/tmp/aegis/evaluation.db")
+            else:
+                db_path = Path.home() / ".aegis" / "evaluation.db"
         self._db_path = Path(db_path)
         self._db_path.parent.mkdir(parents=True, exist_ok=True)
         self._init_db()

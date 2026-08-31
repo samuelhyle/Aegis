@@ -1,0 +1,16 @@
+{
+  "services": {
+    "aegis-backend": {
+      "root": "."
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "type": "service",
+        "service": "aegis-backend"
+      }
+    }
+  ]
+}

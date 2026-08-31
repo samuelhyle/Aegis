@@ -23,7 +23,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from enum import StrEnum
-from typing import Any
+from typing import Any, Optional
 
 from .store import SyntheaStore
 
@@ -291,14 +291,20 @@ class TemporalAnalyzer:
 
         return trajectories
 
-    def _parse_date(self, date_str: str) -> datetime | None:
-        """Parse a date string."""
-        if not date_str:
+    def _parse_date(self, date_str: Any) -> Optional[datetime]:
+        """Parse a date string. Handles NaN/None/empty values."""
+        if not date_str or (isinstance(date_str, float) and math.isnan(date_str)):
+            return None
+        date_str = str(date_str).strip()
+        if not date_str or date_str.lower() in ("nan", "none", "null"):
             return None
 
         try:
             # Try ISO format
-            return datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            try:
+                return datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            except (ValueError, AttributeError):
+                return None
         except ValueError:
             pass
 
@@ -307,7 +313,7 @@ class TemporalAnalyzer:
             for fmt in ["%Y-%m-%d", "%Y-%m-%dT%H:%M:%S", "%m/%d/%Y"]:
                 try:
                     return datetime.strptime(date_str[:10], fmt[:len(date_str[:10])])
-                except ValueError:
+                except (ValueError, TypeError):
                     continue
         except Exception:
             pass
@@ -605,12 +611,18 @@ class DiseaseProgressionModeler:
         else:
             return 0.3
 
-    def _parse_date(self, date_str: str) -> datetime | None:
-        """Parse a date string."""
-        if not date_str:
+    def _parse_date(self, date_str: Any) -> Optional[datetime]:
+        """Parse a date string. Handles NaN/None/empty values."""
+        if not date_str or (isinstance(date_str, float) and math.isnan(date_str)):
+            return None
+        date_str = str(date_str).strip()
+        if not date_str or date_str.lower() in ("nan", "none", "null"):
             return None
         try:
-            return datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            try:
+                return datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            except (ValueError, AttributeError):
+                return None
         except ValueError:
             try:
                 return datetime.strptime(date_str[:10], "%Y-%m-%d")

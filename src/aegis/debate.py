@@ -355,19 +355,35 @@ class MultiAgentOrchestrator:
         total_tool_calls = 0
         total_reasoning_steps = 0
 
-        for name, agent in active_agents.items():
+        # Run agents in parallel for speed
+        import asyncio
+        agent_names = list(active_agents.keys())
+
+        async def run_agent(name: str) -> tuple[str, AgentConclusion]:
+            agent = active_agents[name]
             try:
                 conclusion = await agent.investigate(patient_id, question)
-                agent_conclusions[name] = conclusion
-                total_tool_calls += agent._tool_call_count
-                total_reasoning_steps += len(agent._reasoning_chain)
+                return name, conclusion
             except Exception as e:
-                # Create error conclusion
-                agent_conclusions[name] = AgentConclusion(
-                    summary=f"Agent {name} failed: {str(e)}",
+                return name, AgentConclusion(
+                    summary=f"Agent {name} failed: {str(e)[:200]}",
                     confidence=0.0,
-                    uncertainties=[f"Agent error: {str(e)}"],
+                    uncertainties=[f"Agent error: {str(e)[:200]}"],
                 )
+
+        # Execute all agents concurrently
+        results = await asyncio.gather(
+            *[run_agent(name) for name in agent_names],
+            return_exceptions=False,
+        )
+
+        for name, conclusion in results:
+            agent_conclusions[name] = conclusion
+            try:
+                total_tool_calls += active_agents[name]._tool_call_count
+                total_reasoning_steps += len(active_agents[name]._reasoning_chain)
+            except Exception:
+                pass
 
         # Run debate if enabled and multiple agents
         debate_result = None

@@ -285,12 +285,12 @@ class LocalProvider(LLMProvider):
         system: str,
         user: str,
         temperature: float = 0.0,
-        max_retries: int = 3,
+        max_retries: int = 2,
     ) -> LLMResponse:
         import httpx
 
         async def _call():
-            async with httpx.AsyncClient(timeout=120.0) as client:
+            async with httpx.AsyncClient(timeout=60.0) as client:
                 payload = {
                     "model": self._model_name,
                     "messages": [
@@ -348,7 +348,7 @@ class LocalProvider(LLMProvider):
         )
 
         async def _call():
-            async with httpx.AsyncClient(timeout=120.0) as client:
+            async with httpx.AsyncClient(timeout=60.0) as client:
                 payload = {
                     "model": self._model_name,
                     "messages": [

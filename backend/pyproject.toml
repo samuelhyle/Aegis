@@ -1,0 +1,23 @@
+[project]
+name = "aegis-backend"
+version = "0.4.0"
+description = "AEGIS Agentic Clinical Intelligence Backend"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.9",
+    "pandas>=2.2",
+    "python-jose[cryptography]>=3.3",
+    "passlib[bcrypt]>=1.7",
+    "python-multipart>=0.0.9",
+    "openai>=1.30",
+    "psycopg2-binary>=2.9",
+    "sqlalchemy>=2.0",
+    "pgvector>=0.3",
+    "python-dotenv>=1.0",
+    "mangum>=0.17.0",
+]
+
+[tool.vercel]
+entrypoint = "api.index:app"
