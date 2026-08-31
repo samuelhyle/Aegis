@@ -1,0 +1,60 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+.eggs
+dist
+build
+*.egg
+
+# Virtual environments
+.venv
+venv
+env
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node.js (web frontend)
+web/node_modules
+web/.next
+web/.env.local
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+docs/
+*.md
+
+# Tests
+tests/
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Data (exclude large files)
+data/synthea/*.csv
+data/synthea/*.json
+
+# Benchmarks
+benchmark.jsonl
+evaluation_results.json
+
+# Database files
+*.db
+*.sqlite

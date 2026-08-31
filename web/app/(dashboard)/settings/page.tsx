@@ -14,6 +14,7 @@ export default function SettingsPage() {
   const { data: healthData } = useSystemHealth();
   const { data: statsData } = useSystemStats();
   const [apiKey, setApiKey] = useState(() => {
+    if (typeof window === "undefined") return "";
     return localStorage.getItem("aegis-api-key") || "";
   });
   const [apiKeySaved, setApiKeySaved] = useState(false);

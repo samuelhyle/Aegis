@@ -30,11 +30,14 @@ const DEFAULT_USER: User = {
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => {
+    if (typeof window === "undefined") return null;
     try {
       const stored = localStorage.getItem("aegis-user");
       return stored ? JSON.parse(stored) : null;
     } catch {
-      localStorage.removeItem("aegis-user");
+      if (typeof localStorage !== "undefined") {
+        localStorage.removeItem("aegis-user");
+      }
       return null;
     }
   });

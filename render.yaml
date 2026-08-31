@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: aegis-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    branch: main
+    envVars:
+      - key: AEGIS_ENV
+        value: production
+      - key: AEGIS_AUTH_DISABLED
+        value: "true"
+      - key: AEGIS_SECRET_KEY
+        generateValue: true
+      - key: LLM_PROVIDER
+        value: minimax
+      - key: LLM_MODEL
+        value: MiniMax-M3
+      - key: MINIMAX_API_KEY
+        sync: false
+      - key: MINIMAX_BASE_URL
+        value: https://api.minimax.io/v1
+      - key: DATABASE_URL
+        value: sqlite:///./aegis.db
+      - key: LOG_LEVEL
+        value: INFO
+      - key: RATE_LIMIT_ENABLED
+        value: "false"
+      - key: CORS_ORIGINS
+        value: https://web-khaki-two-44.vercel.app,https://aegis-frontend.vercel.app
+    healthCheckPath: /health

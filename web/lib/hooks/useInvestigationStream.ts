@@ -61,8 +61,13 @@ export function useInvestigationStream() {
     abortControllerRef.current = new AbortController();
 
     try {
+      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "";
+      const streamUrl = backendUrl
+        ? `${backendUrl}/v1/investigations/stream`
+        : `/api/proxy/v1/investigations/stream`;
+      
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/v1/investigations/stream`,
+        streamUrl,
         {
           method: "POST",
           headers: {

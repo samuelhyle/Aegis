@@ -44,14 +44,15 @@ import type {
   CompareEvaluationsResponse,
 } from "@/types";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 class ApiClient {
   private baseUrl: string;
   private apiKey: string | null;
 
   constructor(baseUrl: string = API_BASE_URL) {
-    this.baseUrl = baseUrl;
+    // In production (Vercel), use the proxy route; in development, use direct backend URL
+    this.baseUrl = baseUrl || (typeof window !== "undefined" ? "" : "http://localhost:8000");
     this.apiKey = null;
   }
 
@@ -69,7 +70,10 @@ class ApiClient {
       headers["X-API-Key"] = this.apiKey;
     }
 
-    const response = await fetch(`${this.baseUrl}${path}`, {
+    // Use proxy route in production (Vercel), direct URL in development
+    const url = this.baseUrl ? `${this.baseUrl}${path}` : `/api/proxy${path}`;
+
+    const response = await fetch(url, {
       ...options,
       headers,
     });
@@ -135,7 +139,8 @@ class ApiClient {
   }
 
   async streamInvestigation(patientId: string, question: string) {
-    const response = await fetch(`${this.baseUrl}/v1/investigations/stream`, {
+    const url = this.baseUrl ? `${this.baseUrl}/v1/investigations/stream` : `/api/proxy/v1/investigations/stream`;
+    const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

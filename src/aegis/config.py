@@ -14,6 +14,8 @@ def get_settings() -> dict[str, str]:
         "secret_key": os.getenv("AEGIS_SECRET_KEY", "change-me-in-production"),
         "llm_provider": os.getenv("LLM_PROVIDER", "mock"),
         "openai_api_key": os.getenv("OPENAI_API_KEY", ""),
+        "minimax_api_key": os.getenv("MINIMAX_API_KEY", ""),
+        "minimax_base_url": os.getenv("MINIMAX_BASE_URL", "https://api.minimax.io/v1"),
         "model_name": os.getenv("MODEL_NAME", "gpt-4o-mini"),
         "redis_url": os.getenv("REDIS_URL", "redis://localhost:6379"),
         "database_url": os.getenv("DATABASE_URL", "sqlite:///./aegis.db"),

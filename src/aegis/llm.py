@@ -43,6 +43,9 @@ class LLMProvider(ABC):
         "gemma4:26b": (0.0, 0.0),
         "llama3": (0.0, 0.0),
         "mistral": (0.0, 0.0),
+        "MiniMax-M3": (0.39, 1.20),
+        "MiniMax-M2.7": (0.52, 1.56),
+        "MiniMax-M1": (0.52, 1.56),
     }
 
     @abstractmethod
@@ -511,6 +514,118 @@ class MLXProvider(LLMProvider):
         return await self._retry_with_backoff(_call, max_retries)
 
 
+class MiniMaxProvider(LLMProvider):
+    """MiniMax LLM provider - OpenAI-compatible API at https://api.minimax.io/v1."""
+
+    PRICING: ClassVar[dict[str, tuple[float, float]]] = {
+        "MiniMax-M3": (0.39, 1.20),
+        "MiniMax-M2.7": (0.52, 1.56),
+        "MiniMax-M1": (0.52, 1.56),
+    }
+
+    def __init__(
+        self,
+        model_name: str = "MiniMax-M3",
+        base_url: str = "https://api.minimax.io/v1",
+        api_key: str | None = None,
+    ):
+        self._model_name = model_name
+        self._base_url = base_url
+        self._api_key = api_key or os.getenv("MINIMAX_API_KEY", "")
+
+    @property
+    def name(self) -> str:
+        return "minimax"
+
+    @property
+    def model_name(self) -> str:
+        return self._model_name
+
+    async def complete(
+        self,
+        system: str,
+        user: str,
+        temperature: float = 0.0,
+        max_retries: int = 3,
+    ) -> LLMResponse:
+        from openai import OpenAI
+
+        if not self._api_key:
+            raise ValueError("MINIMAX_API_KEY environment variable not set")
+
+        async def _call():
+            client = OpenAI(api_key=self._api_key, base_url=self._base_url)
+            start = time.perf_counter()
+            response = client.chat.completions.create(
+                model=self._model_name,
+                messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+                temperature=temperature,
+            )
+            latency_ms = (time.perf_counter() - start) * 1000
+
+            usage = {
+                "prompt_tokens": response.usage.prompt_tokens if response.usage else 0,
+                "completion_tokens": response.usage.completion_tokens if response.usage else 0,
+                "total_tokens": response.usage.total_tokens if response.usage else 0,
+            }
+            cost = self._calculate_cost(usage)
+
+            return LLMResponse(
+                content=response.choices[0].message.content or "",
+                model=self._model_name,
+                usage=usage,
+                cost_usd=cost,
+                latency_ms=latency_ms,
+            )
+
+        return await self._retry_with_backoff(_call, max_retries)
+
+    async def structured_output(
+        self,
+        system: str,
+        user: str,
+        response_model: type[BaseModel],
+        temperature: float = 0.0,
+        max_retries: int = 3,
+    ) -> BaseModel:
+        import json
+
+        from openai import OpenAI
+
+        if not self._api_key:
+            raise ValueError("MINIMAX_API_KEY environment variable not set")
+
+        schema = response_model.model_json_schema()
+        schema_prompt = (
+            f"\n\nYou MUST respond with valid JSON that matches this schema:\n"
+            f"{json.dumps(schema, indent=2)}\n"
+            f"Respond ONLY with the JSON object, no other text."
+        )
+
+        async def _call():
+            client = OpenAI(api_key=self._api_key, base_url=self._base_url)
+            response = client.chat.completions.create(
+                model=self._model_name,
+                messages=[
+                    {"role": "system", "content": system + schema_prompt},
+                    {"role": "user", "content": user},
+                ],
+                temperature=temperature,
+            )
+            content = response.choices[0].message.content or ""
+
+            # Try to extract JSON from markdown code blocks
+            if "```json" in content:
+                content = content.split("```json")[1].split("```")[0].strip()
+            elif "```" in content:
+                content = content.split("```")[1].split("```")[0].strip()
+
+            parsed = json.loads(content)
+            return cast(BaseModel, response_model.model_validate(parsed))
+
+        return await self._retry_with_backoff(_call, max_retries)
+
+
 class ProviderFactory:
     """Factory for creating LLM provider instances from config."""
 
@@ -519,6 +634,7 @@ class ProviderFactory:
         "openai": OpenAIProvider,
         "local": LocalProvider,
         "mlx": MLXProvider,
+        "minimax": MiniMaxProvider,
     }
 
     @classmethod
@@ -540,6 +656,13 @@ class ProviderFactory:
             kwargs["base_url"] = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
         if type_ == "mlx" and "model_path" not in kwargs:
             kwargs["model_path"] = os.getenv("MLX_MODEL_PATH", os.getenv("LLM_MODEL", ""))
+        if type_ == "minimax":
+            if "model_name" not in kwargs:
+                kwargs["model_name"] = os.getenv("LLM_MODEL", "MiniMax-M3")
+            if "api_key" not in kwargs:
+                kwargs["api_key"] = os.getenv("MINIMAX_API_KEY", "")
+            if "base_url" not in kwargs:
+                kwargs["base_url"] = os.getenv("MINIMAX_BASE_URL", "https://api.minimax.io/v1")
 
         return provider_class(**kwargs)
 

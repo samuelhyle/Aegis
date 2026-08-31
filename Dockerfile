@@ -19,7 +19,7 @@ FROM python:3.11-slim AS production
 # Add metadata
 LABEL maintainer="AEGIS Team"
 LABEL description="AEGIS Agentic Clinical Intelligence"
-LABEL version="0.3.0"
+LABEL version="0.4.0"
 
 WORKDIR /app
 
@@ -34,6 +34,7 @@ COPY --from=builder /install /usr/local
 # Copy application code
 COPY src/ /app/src/
 COPY data/ /app/data/
+COPY prompts/ /app/prompts/
 COPY benchmark.jsonl /app/
 
 # Create non-root user
@@ -53,4 +54,7 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
-CMD ["uvicorn", "aegis.api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
+COPY start.sh /app/start.sh
+RUN chmod +x /app/start.sh
+
+CMD ["/app/start.sh"]
