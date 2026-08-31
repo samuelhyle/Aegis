@@ -31,3 +31,6 @@ pgvector>=0.3,<0.4
 
 # Optional: Utilities
 python-dotenv>=1.0,<2.0
+
+# Vercel serverless adapter
+mangum>=0.17.0

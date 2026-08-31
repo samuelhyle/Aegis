@@ -1,5 +1,8 @@
 # Evaluation Plan
 
+> **🚀 Live evaluation dashboard**: [aegis-beta-bice.vercel.app/analytics/evaluation](https://aegis-beta-bice.vercel.app/analytics/evaluation)
+> API: `GET https://backend-three-tan-79.vercel.app/v2/evaluation/metrics`
+
 ## Benchmark
 
 Create a versioned JSONL benchmark:

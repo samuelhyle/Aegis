@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AEGIS Web Frontend
 
-## Getting Started
+> **🔴 Live**: [aegis-beta-bice.vercel.app](https://aegis-beta-bice.vercel.app)
+> Backend: [backend-three-tan-79.vercel.app](https://backend-three-tan-79.vercel.app)
 
-First, run the development server:
+Next.js 16 frontend for the AEGIS clinical intelligence platform.
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+vercel --prod
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Set the backend URL:
+```bash
+vercel env add BACKEND_URL production
+# → https://your-backend.vercel.app
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Architecture
 
-## Deploy on Vercel
+```
+Browser → Next.js (Vercel) → /api/proxy/* → FastAPI (Vercel Python)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+When `BACKEND_URL` is set, the frontend proxies API requests to the Python backend. Without it, the built-in mock API routes serve placeholder data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [`../DEPLOYMENT.md`](../DEPLOYMENT.md) for full details.
+
+## Tech Stack
+
+- **Next.js 16** with App Router + Turbopack
+- **React 19** Server Components
+- **TanStack Query** for server state
+- **Zustand** for client state
+- **Tailwind CSS 4** for styling
+- **Recharts** for data visualization
+- **shadcn-style** UI primitives
+
+## Scripts
+
+- `npm run dev` — Dev server with hot reload
+- `npm run build` — Production build
+- `npm start` — Production server
+- `npm run lint` — ESLint
+- `npm run typecheck` — TypeScript check
+- `npm test` — Vitest unit tests

@@ -1,0 +1,7 @@
+Id,PATIENT,DATE,ENCOUNTERCLASS,DESCRIPTION,REASONCODE,REASONDESCRIPTION
+enc-001,patient-001,2024-01-15,ambulatory,Office Visit,,Diabetes follow-up
+enc-002,patient-001,2023-10-20,ambulatory,Lab Work,,Routine blood work
+enc-003,patient-002,2024-02-20,ambulatory,Office Visit,,Asthma review
+enc-004,patient-003,2024-03-10,ambulatory,Physical Therapy,,Back pain treatment
+enc-005,patient-004,2024-04-05,ambulatory,Office Visit,,Anxiety follow-up
+enc-006,patient-005,2024-05-12,ambulatory,Office Visit,,Cardiology follow-up

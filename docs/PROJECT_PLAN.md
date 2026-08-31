@@ -1,5 +1,9 @@
 # AEGIS Complete Project Plan
 
+> **🚀 Status**: **All phases complete and deployed to production**
+> Live at: [aegis-beta-bice.vercel.app](https://aegis-beta-bice.vercel.app)
+> Backend: [backend-three-tan-79.vercel.app](https://backend-three-tan-79.vercel.app)
+
 ## 1. Vision
 
 Build an auditable multi-agent AI environment that investigates synthetic longitudinal patient records. The objective is not automated diagnosis. The objective is to demonstrate production-oriented AI engineering: orchestration, tool use, retrieval, evaluation, observability, uncertainty handling and human oversight.
@@ -89,80 +93,20 @@ Evaluation Agent:
 
 ## 6. Phase roadmap
 
-### Phase 0 — Foundation
-- FastAPI
-- Pydantic
-- Synthea import
-- SQLite/PostgreSQL
-- basic tests
+| Phase | Description | Status |
+|-------|-------------|--------|
+| Phase 0 — Foundation | FastAPI, Pydantic, Synthea import, SQLite/PostgreSQL, basic tests | ✅ |
+| Phase 1 — Agent runtime | Agent interface, task objects, event bus, orchestration graph, trace IDs, parallel execution | ✅ |
+| Phase 2 — LLM integration | Provider abstraction, structured JSON outputs, retry/fallback, prompt versioning, token/cost tracking | ✅ |
+| Phase 3 — RAG | Document ingestion, chunking, embeddings, vector database, reranking, evidence objects, citation enforcement | ✅ |
+| Phase 4 — Safety | Confidence thresholds, contradiction detection, prompt injection defenses, PII checks, human approval gate, audit log | ✅ |
+| Phase 5 — Evaluation | 50-200 benchmark questions, metrics (factuality, evidence coverage, retrieval precision, citation correctness, hallucination rate, latency, cost) | ✅ |
+| Phase 6 — UI | Next.js interface (patient selector, investigation composer, agent graph, live event trace, evidence panel, final report, evaluation dashboard, human-review queue) | ✅ |
+| Phase 7 — Production engineering | Docker Compose, PostgreSQL, Redis, OpenTelemetry, Prometheus/Grafana, CI, security scanning, rate limiting, structured logging | ✅ |
 
-### Phase 1 — Agent runtime
-- Agent interface
-- task objects
-- event bus
-- orchestration graph
-- trace IDs
-- parallel execution
+### 🎉 All phases delivered and live in production
 
-### Phase 2 — LLM integration
-- provider abstraction
-- structured JSON outputs
-- retry/fallback
-- prompt versioning
-- token/cost tracking
-
-### Phase 3 — RAG
-- document ingestion
-- chunking
-- embeddings
-- vector database
-- reranking
-- evidence objects
-- citation enforcement
-
-### Phase 4 — Safety
-- confidence thresholds
-- contradiction detection
-- prompt injection defenses
-- PII checks
-- human approval gate
-- audit log
-
-### Phase 5 — Evaluation
-Create 50-200 benchmark questions over synthetic patients.
-
-Metrics:
-- factuality
-- evidence coverage
-- retrieval precision
-- citation correctness
-- task completion
-- hallucination rate
-- latency
-- token usage
-- estimated cost
-
-### Phase 6 — UI
-Build Next.js interface:
-- patient selector
-- investigation composer
-- agent graph
-- live event trace
-- evidence panel
-- final report
-- evaluation dashboard
-- human-review queue
-
-### Phase 7 — Production engineering
-- Docker Compose
-- PostgreSQL
-- Redis
-- OpenTelemetry
-- Prometheus/Grafana
-- CI
-- security scanning
-- rate limiting
-- structured logging
+Visit the [live deployment](https://aegis-beta-bice.vercel.app) to see the complete system in action.
 
 ## 7. Portfolio acceptance criteria
 

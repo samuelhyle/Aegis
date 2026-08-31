@@ -1,200 +1,278 @@
 # AEGIS — Agentic Clinical Intelligence Environment
 
-AEGIS is a portfolio-grade, safety-oriented agentic AI environment for investigating **synthetic** patient records.
+[![Live](https://img.shields.io/badge/LIVE-aegis--beta--bice.vercel.app-0070f3?style=flat-square&logo=vercel)](https://aegis-beta-bice.vercel.app)
+[![Backend](https://img.shields.io/badge/API-backend--three--tan--79.vercel.app-0070f3?style=flat-square&logo=vercel)](https://backend-three-tan-79.vercel.app)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-black.svg)](https://nextjs.org/)
 
+> **🔴 Live in production**: [aegis-beta-bice.vercel.app](https://aegis-beta-bice.vercel.app)
+> A portfolio-grade, safety-oriented agentic AI environment for investigating **sYNTHETIC** patient records.
 > Research/engineering demonstration only. Not a medical device and not for clinical decision-making.
 
-## Dataset
+---
 
-The MVP is designed around **Synthea**, an open-source synthetic patient population simulator. Synthea generates realistic-but-synthetic longitudinal records including patients, encounters, conditions, medications, observations/labs, procedures and care plans.
+## What is AEGIS?
 
-- Synthea: https://github.com/synthetichealth/synthea
-- Official downloads: https://synthea.mitre.org/downloads
+AEGIS is a **multi-agent clinical intelligence platform** that orchestrates specialized AI agents to investigate synthetic patient records from [Synthea](https://github.com/synthetichealth/synthea). It demonstrates production-grade patterns for agentic AI systems: tool use, retrieval-augmented reasoning, multi-agent debate, evaluation, human-in-the-loop review, and structured outputs.
 
-The project deliberately does **not** bundle large datasets. The included seed/demo data is synthetic and tiny; the ingestion pipeline can import Synthea CSV exports.
+### **Live Demo Features**
 
-## What this project demonstrates
+- 🩺 **5 synthetic patients** with full longitudinal records
+- 🤖 **4 specialized agents**: Diagnostic, Treatment, Risk Assessment, Timeline
+- 🔬 **Multi-agent debate** for consensus conclusions
+- 📊 **Graph RAG** for relationship discovery
+- ⏱️ **Temporal analysis** with anomaly detection
+- ⚖️ **Safety gates** and human review workflows
+- 🧠 **MiniMax-M3** LLM integration (OpenAI-compatible)
 
-- Multi-agent orchestration
-- Tool-using agents
-- Retrieval-oriented architecture
-- Structured LLM outputs
-- Agent traces and event logging
-- Evidence/claim tracking
-- Evaluation hooks
-- Human-in-the-loop review
-- FastAPI backend
-- React/Next.js-ready frontend boundary
-- Docker-ready architecture
-- Safety boundaries and auditability
+---
 
-## MVP workflow
+## 🏗️ Architecture
 
-1. Import Synthea CSV files.
-2. Select a synthetic patient.
-3. Ask an investigation question.
-4. Orchestrator decomposes the task.
-5. Timeline, medication and evidence agents execute.
-6. Critic checks the result.
-7. Synthesis agent produces a structured report.
-8. Evaluation records grounding, completeness, confidence and latency.
-
-## Quick start
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e ".[dev]"
-uvicorn aegis.api:app --reload
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Browser                                                         │
+└──────────────┬──────────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  Vercel Edge — Next.js 16 Frontend                              │
+│  https://aegis-beta-bice.vercel.app                             │
+│  • React 19 + Server Components                                 │
+│  • TanStack Query + Zustand                                     │
+│  • shadcn-style components                                      │
+│  • /api/proxy/* → forwards to Python backend                    │
+└──────────────┬──────────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  Vercel Functions — Python 3.12 / FastAPI / Mangum              │
+│  https://backend-three-tan-79.vercel.app                        │
+│  • 50+ endpoints (v1, v2, v3, multi-agent, graph RAG, temporal) │
+│  • Streaming SSE for investigations                             │
+│  • Tool-using orchestrator                                      │
+│  • SQLite + structured logging                                  │
+└──────────────┬──────────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  MiniMax-M3 LLM                                                 │
+│  https://api.minimax.io/v1                                      │
+│  • OpenAI-compatible Chat Completions                           │
+│  • 1M context window, frontier reasoning                        │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
-Then open http://127.0.0.1:8000/docs
+---
 
-## Generate Synthea data
+## 🚀 Quick Start (Local Development)
 
-Install Java 17+ and clone Synthea. Generate a small population, exporting CSV:
-
-```bash
-git clone https://github.com/synthetichealth/synthea.git
-cd synthea
-./run_synthea -p 100 --exporter.csv.export=true
-```
-
-Copy the generated CSV files into `data/synthea/` and run:
-
-```bash
-aegis-ingest data/synthea
-```
-
-## Architecture
-
-See:
-- docs/PROJECT_PLAN.md
-- docs/ARCHITECTURE.md
-- docs/AGENTS.md
-- docs/EVALUATION.md
-- docs/ROADMAP.md
-
-## License
-
-MIT for this starter code. Dataset licenses/terms remain those of their respective sources.
-
-
-## Dataset acquisition — detailed instructions
-
-### Option A: Generate your own Synthea dataset (recommended)
-
-This is the cleanest reproducible approach because you do not need to download a pre-generated patient population.
-
-Requirements:
-- Git
-- Java 17+ (Synthea recommends an LTS JDK)
+### Prerequisites
 - Python 3.11+
+- Node.js 20+
+- Git
 
-1. Clone Synthea:
-
+### 1. Clone & install
 ```bash
-git clone https://github.com/synthetichealth/synthea.git
-cd synthea
+git clone https://github.com/samuelhyle/Aegis.git
+cd Aegis
+
+# Backend
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev,llm]"
+
+# Frontend
+cd web && npm install && cd ..
 ```
 
-2. Generate 100 synthetic patients with CSV export:
-
+### 2. Configure environment
 ```bash
-./run_synthea -p 100 --exporter.csv.export=true
+# Copy and edit env files
+cp .env.example .env.development
+cp web/.env.local.example web/.env.local
+
+# Add your MiniMax API key to .env.development
+echo "MINIMAX_API_KEY=your-key-here" >> .env.development
 ```
 
-On Windows PowerShell:
-
-```powershell
-.un_synthea.bat -p 100 --exporter.csv.export=true
-```
-
-3. Find the generated CSV files under:
-
-```text
-output/csv/
-```
-
-4. Copy the CSV files into the AEGIS data directory:
-
-```text
-aegis-agentic-clinical-intelligence/
-└── data/
-    └── synthea/
-        ├── patients.csv
-        ├── encounters.csv
-        ├── conditions.csv
-        ├── medications.csv
-        ├── observations.csv
-        ├── procedures.csv
-        ├── allergies.csv
-        ├── careplans.csv
-        └── immunizations.csv
-```
-
-5. From the AEGIS root:
-
+### 3. Start the stack
 ```bash
-aegis-ingest data/synthea
-```
-
-### Option B: Download an official Synthea population
-
-Synthea provides official downloadable synthetic populations through its project/download pages:
-
-- Synthea project: https://github.com/synthetichealth/synthea
-- Synthea downloads: https://synthea.mitre.org/downloads
-
-If you download a population archive, extract its CSV export and place the relevant files in `data/synthea/`.
-
-### Recommended development sizes
-
-Start small:
-
-```text
-100 patients  -> development
-1,000 patients -> integration testing
-10,000+ patients -> retrieval/evaluation experiments
-```
-
-Do not commit large generated datasets to Git. The repository's `.gitignore` excludes generated Synthea data.
-
-### Why Synthea?
-
-Synthea generates synthetic, not real, patient histories. This is intentional: AEGIS is an AI engineering portfolio project and should not require real patient data. Synthea supports longitudinal records and multiple interoperable output formats.
-
-## Optional FHIR track
-
-For a more advanced version, generate FHIR output as well:
-
-```bash
-./run_synthea -p 100
-```
-
-Synthea can produce FHIR resources that can later be ingested into a FHIR-aware service. AEGIS should initially use CSV because it is easier to inspect and prototype with; add FHIR as Phase 3/4.
-
-## First investigation after importing data
-
-Once Synthea data is present, start the API:
-
-```bash
+# Terminal 1 — backend (http://localhost:8000)
 uvicorn aegis.api:app --reload
+
+# Terminal 2 — frontend (http://localhost:3000)
+cd web && npm run dev
 ```
 
-Open:
+Open **http://localhost:3000** in your browser.
 
-```text
-http://127.0.0.1:8000/docs
+---
+
+## 📦 Repository Layout
+
+```
+aegis/
+├── src/aegis/                 # Python backend (FastAPI)
+│   ├── api.py                 # Main app + 50+ endpoints
+│   ├── llm.py                 # LLM provider abstraction
+│   ├── orchestrator.py        # Multi-agent orchestration
+│   ├── reasoning_agents.py    # Diagnostic/Treatment/Risk/Timeline
+│   ├── graph_rag.py           # Knowledge graph RAG
+│   ├── temporal.py            # Time-series analysis
+│   ├── debate.py              # Multi-agent debate protocol
+│   ├── safety.py              # Input/output safety gates
+│   ├── evidence.py            # Evidence tracking
+│   ├── evaluation.py          # Agent evaluation framework
+│   └── ...
+│
+├── web/                       # Next.js 16 frontend
+│   ├── app/
+│   │   ├── (dashboard)/       # Protected pages
+│   │   │   ├── dashboard/
+│   │   │   ├── patients/
+│   │   │   ├── investigations/
+│   │   │   ├── analytics/     # Graph RAG, Temporal, Eval, Risk
+│   │   │   └── settings/
+│   │   └── api/proxy/         # Backend proxy
+│   ├── components/
+│   ├── lib/
+│   └── ...
+│
+├── backend/                   # Vercel Python deployment
+│   ├── app.py                 # Vercel entry point
+│   ├── src/aegis/             # Backend code (synced)
+│   ├── data/synthea/          # Seed CSV data
+│   ├── requirements.txt
+│   └── vercel.json
+│
+├── data/synthea/              # Generated Synthea CSVs
+├── docs/                      # Architecture & planning docs
+├── prompts/                   # Agent system prompts
+└── tests/                     # Pytest suite
 ```
 
-Use `POST /v1/investigations`:
+---
 
-```json
-{
-  "patient_id": "YOUR-SYNTHEA-PATIENT-ID",
-  "question": "Summarize this patient's longitudinal health record and identify important changes."
-}
+## 🎯 Core Capabilities
+
+### Multi-Agent Orchestration
+Four specialized agents work in parallel and debate:
+- **Diagnostic** — Differential diagnosis, evidence evaluation
+- **Treatment** — Medication review, drug interaction checking
+- **Risk Assessment** — Risk stratification, outcome prediction
+- **Timeline** — Temporal pattern detection, disease progression
+
+### Graph RAG
+Beyond vector search — traverses patient knowledge graphs to discover:
+- Comorbidity patterns
+- Causal chains (condition → treatment → outcome)
+- Communities of related health issues
+- Centrality-ranked key factors
+
+### Temporal Intelligence
+- Lab value trajectory prediction
+- Disease progression modeling
+- Anomaly detection (z-score, out-of-range)
+- Health state transitions
+
+### Safety & Auditability
+- Input safety gate (blocks unsafe queries)
+- Output safety gate (flags low-confidence results)
+- Human-in-the-loop review workflow
+- Complete trace logging
+
+---
+
+## 🧪 Evaluation Framework
+
+AEGIS includes a built-in benchmark suite:
+- **Diagnostic accuracy** vs expected findings
+- **Completeness** coverage
+- **Grounding** evidence support
+- **Confidence calibration** vs expected range
+- **Reasoning quality** chain analysis
+- **Tool efficiency** usage metrics
+
+See [`docs/EVALUATION.md`](docs/EVALUATION.md) for details.
+
+---
+
+## 🛠️ LLM Provider Support
+
+| Provider | Model | Config |
+|----------|-------|--------|
+| **MiniMax** (default) | MiniMax-M3 | `LLM_PROVIDER=minimax` |
+| OpenAI | gpt-4o, gpt-4o-mini | `LLM_PROVIDER=openai` |
+| Ollama (local) | gemma, llama, mistral | `LLM_PROVIDER=local` |
+| MLX (Apple Silicon) | gemma-4-26b | `LLM_PROVIDER=mlx` |
+| Mock (dev) | — | `LLM_PROVIDER=mock` |
+
+Set `MINIMAX_API_KEY` (or `OPENAI_API_KEY`, etc.) in your environment.
+
+---
+
+## 🚢 Deployment
+
+Both frontend and backend deploy to **Vercel**:
+
+| Project | URL |
+|---------|-----|
+| Frontend | [aegis-beta-bice.vercel.app](https://aegis-beta-bice.vercel.app) |
+| Backend | [backend-three-tan-79.vercel.app](https://backend-three-tan-79.vercel.app) |
+
+### Deploy your own
+
+```bash
+# Frontend
+cd web && vercel --prod
+
+# Backend
+cd backend && vercel --prod
+
+# Set env vars
+vercel env add LLM_PROVIDER production  # value: minimax
+vercel env add LLM_MODEL production     # value: MiniMax-M3
+vercel env add MINIMAX_API_KEY production  # your key
+vercel env add AEGIS_AUTH_DISABLED production  # true
 ```
 
-The current starter returns a structured, traceable research report. Later versions will replace the deterministic agent implementations with real LLM reasoning, RAG and evaluation.
+See [`DEPLOYMENT.md`](DEPLOYMENT.md) for the full deployment guide.
+
+---
+
+## 📚 Documentation
+
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** — Production deployment guide
+- **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — System architecture deep-dive
+- **[docs/PROJECT_PLAN.md](docs/PROJECT_PLAN.md)** — MVP planning & scope
+- **[docs/AGENTS.md](docs/AGENTS.md)** — Agent design specification
+- **[docs/EVALUATION.md](docs/EVALUATION.md)** — Evaluation methodology
+- **[docs/ROADMAP.md](docs/ROADMAP.md)** — Development roadmap
+- **[docs/DATASET_SETUP.md](docs/DATASET_SETUP.md)** — Generating Synthea data
+
+---
+
+## ⚠️ Safety Notice
+
+This is a **research and engineering demonstration** project.
+- Uses **synthetic** patient data from Synthea — no real PHI
+- All AI outputs are **advisory only** — not for clinical decisions
+- Every investigation is **traceable** and **reviewable**
+- Built-in safety gates block unsafe queries
+
+---
+
+## 📝 License
+
+MIT — see [LICENSE](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+- [Synthea](https://github.com/synthetichealth/synthea) — synthetic patient generator
+- [FastAPI](https://fastapi.tiangolo.com/) — backend framework
+- [Next.js](https://nextjs.org/) — frontend framework
+- [Vercel](https://vercel.com/) — hosting
+- [MiniMax](https://platform.minimax.io/) — LLM provider

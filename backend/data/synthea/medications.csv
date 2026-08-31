@@ -1,0 +1,12 @@
+PATIENT,CODE,DESCRIPTION,START,STOP
+patient-001,500mg,Metformin,2020-02-01,
+patient-001,10mg,Lisinopril,2018-07-01,
+patient-001,20mg,Atorvastatin,2019-04-01,
+patient-002,90mcg,Albuterol inhaler,2015-04-01,
+patient-002,10mg,Cetirizine,2016-06-01,
+patient-003,500mg,Acetaminophen,2021-09-01,
+patient-003,20mg,Omeprazole,2020-03-01,
+patient-004,50mg,Sertraline,2019-10-01,
+patient-004,100mg,Sumatriptan,2018-05-01,
+patient-005,81mg,Aspirin,2017-12-01,
+patient-005,40mg,Atorvastatin,2017-12-01,

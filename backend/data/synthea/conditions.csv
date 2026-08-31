@@ -1,0 +1,12 @@
+PATIENT,CODE,DESCRIPTION,START,STOP
+patient-001,E11.9,Type 2 diabetes mellitus,2020-01-15,
+patient-001,I10,Essential hypertension,2018-06-20,
+patient-001,E78.5,Hyperlipidemia unspecified,2019-03-10,
+patient-002,J45.909,Unspecified asthma,2015-03-10,
+patient-002,J30.1,Allergic rhinitis due to pollen,2016-05-15,
+patient-003,M54.5,Low back pain,2021-08-20,
+patient-003,K21.0,GERD with esophagitis,2020-02-15,
+patient-004,F41.1,Generalized anxiety disorder,2019-09-05,
+patient-004,G43.909,Migraine unspecified,2018-04-12,
+patient-005,I25.10,Atherosclerotic heart disease,2017-11-30,
+patient-005,N18.3,Chronic kidney disease stage 3,2019-07-22,

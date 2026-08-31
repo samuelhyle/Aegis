@@ -1,0 +1,11 @@
+PATIENT,DATE,CODE,DESCRIPTION,VALUE,UNITS
+patient-001,2024-01-15,4548-4,Hemoglobin A1c,7.2,%
+patient-001,2024-01-15,85354-9,Blood Pressure,138/88,mmHg
+patient-001,2024-01-15,2093-3,Total Cholesterol,210,mg/dL
+patient-001,2024-01-15,2345-7,Glucose,142,mg/dL
+patient-002,2024-02-20,19934-1,Peak Expiratory Flow,380,L/min
+patient-002,2024-02-20,2708-6,Oxygen Saturation,98,%
+patient-003,2024-03-10,39156-5,Body Mass Index,28.5,kg/m2
+patient-003,2024-03-10,72514-3,Pain Score,6,{score}
+patient-004,2024-04-05,33914-3,GAD-7 Score,12,{score}
+patient-005,2024-05-12,33900-2,eGFR,45,mL/min

@@ -1,0 +1,6 @@
+Id,FIRST,LAST,GENDER,BIRTHDATE,RACE,ETHNICITY
+patient-001,John,Smith,M,1985-03-15,White,Non-Hispanic
+patient-002,Sarah,Johnson,F,1990-07-22,Black,Non-Hispanic
+patient-003,Michael,Williams,M,1978-11-08,White,Non-Hispanic
+patient-004,Emily,Brown,F,1995-01-30,Asian,Non-Hispanic
+patient-005,David,Jones,M,1982-09-12,White,Hispanic

@@ -12,3 +12,9 @@ dist/
 build/
 *.egg-info/
 .DS_Store
+.vercel
+.env*
+backend/src/aegis/
+backend/seed.py
+*.pyc
+__pycache__
